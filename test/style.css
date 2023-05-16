@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #002222;
+}
+nav {
+  background-color: #66ff00;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+.logo {
+  font-size: 2.3em;
+  font-weight: 800;
+  color: #002222;
+  letter-spacing: 2px;
+}
+ol {
+  display: flex;
+  position: relative;
+  margin: auto 0;
+}
+ol li {
+  margin: 0 30px;
+  list-style: none;
+  z-index: 111;
+}
+ol li a {
+  display: block;
+  color: #002222;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: 0.2s 0.1s ease;
+}
+ol .slider {
+  position: absolute;
+  height: 75px;
+  width: 150px;
+  left: 10px;
+  top: -9px;
+  background-color: #002222;
+  border-radius: 15px 15px 0 0;
+  transform: translateX(0);
+  transition: 0.2s ease-in;
+}
+ol .slider::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 25px;
+  background-color: #66ff00;
+  bottom: 1px;
+  left: -25px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 13px 0 0 #002222;
+}
+ol .slider::after {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 25px;
+  background-color: #66ff00;
+  bottom: 1px;
+  right: -25px;
+  border-bottom-left-radius: 15px;
+  box-shadow: -13px 0 0 #002222;
+}
+input{
+    display: none;
+}
+#tap1:checked ~ nav ol li:nth-child(1) a{
+    color: #66ff00;
+}
+#tap2:checked ~ nav ol li:nth-child(2) a{
+    color: #66ff00;
+}
+#tap3:checked ~ nav ol li:nth-child(3) a{
+    color: #66ff00;
+}
+#tap4:checked ~ nav ol li:nth-child(4) a{
+    color: #66ff00;
+}
+#tap5:checked ~ nav ol li:nth-child(5) a{
+    color: #66ff00;
+}
+#tap2:checked ~ nav ol .slider{
+    width: 120px;
+    transform: translateX(162px);
+}
+#tap3:checked ~ nav ol .slider{
+    width: 240px;
+    transform: translateX(295px);
+}
+#tap4:checked ~ nav ol .slider{
+    width: 120px;
+    transform: translateX(547px);
+}
+#tap5:checked ~ nav ol .slider{
+    width: 130px;
+    transform: translateX(700px);
+}
